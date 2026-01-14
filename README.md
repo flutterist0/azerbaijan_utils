@@ -41,15 +41,15 @@ import 'package:azerbaijan_utils/azerbaijan_utils.dart';
 
 ```dart
 // Validate phone numbers
-bool isValid = AzerbaijanValidator.validatePhoneNumber('+994501234567');
+bool isValid = AzerbaijanUtils.validatePhoneNumber('+994501234567');
 // Returns: true
 
 // Format phone number
-String? formatted = AzerbaijanValidator.formatPhoneNumber('0501234567');
+String? formatted = AzerbaijanUtils.formatPhoneNumber('0501234567');
 // Returns: +994501234567
 
 // Get operator name
-String? operator = AzerbaijanValidator.getPhoneOperator('+994501234567');
+String? operator = AzerbaijanUtils.getPhoneOperator('+994501234567');
 // Returns: Azercell
 
 // Supported operators:
@@ -64,7 +64,7 @@ String? operator = AzerbaijanValidator.getPhoneOperator('+994501234567');
 
 ```dart
 // Validate FIN codes (7 characters: letters + numbers)
-bool isValid = AzerbaijanValidator.validateFIN('1AB2C3D');
+bool isValid = AzerbaijanUtils.validateFIN('1AB2C3D');
 // Returns: true
 
 // Examples of valid FIN codes:
@@ -75,15 +75,15 @@ bool isValid = AzerbaijanValidator.validateFIN('1AB2C3D');
 
 ```dart
 // Validate vehicle plates
-bool isValid = AzerbaijanValidator.validateVehiclePlate('10-AA-123');
+bool isValid = AzerbaijanUtils.validateVehiclePlate('10-AA-123');
 // Returns: true
 
 // Format plate number
-String? formatted = AzerbaijanValidator.formatVehiclePlate('10AA123');
+String? formatted = AzerbaijanUtils.formatVehiclePlate('10AA123');
 // Returns: 10-AA-123
 
 // Get region code
-String? region = AzerbaijanValidator.getVehicleRegion('10-AA-123');
+String? region = AzerbaijanUtils.getVehicleRegion('10-AA-123');
 // Returns: 10 (Baku)
 
 // Supported formats: 10-AA-123, 10AA123, 10 AA 123
@@ -93,11 +93,11 @@ String? region = AzerbaijanValidator.getVehicleRegion('10-AA-123');
 
 ```dart
 // Validate postal codes
-bool isValid = AzerbaijanValidator.validatePostalCode('AZ1000');
+bool isValid = AzerbaijanUtils.validatePostalCode('AZ1000');
 // Returns: true
 
 // Format postal code
-String? formatted = AzerbaijanValidator.formatPostalCode('AZ1000');
+String? formatted = AzerbaijanUtils.formatPostalCode('AZ1000');
 // Returns: AZ 1000
 
 // Supported formats: AZ1000, AZ100000
@@ -137,13 +137,13 @@ import 'package:azerbaijan_utils/azerbaijan_utils.dart';
 
 void main() {
   // Phone validation
-  if (AzerbaijanValidator.validatePhoneNumber('+994501234567')) {
+  if (AzerbaijanUtils.validatePhoneNumber('+994501234567')) {
     print('Valid phone number!');
-    print('Operator: ${AzerbaijanValidator.getPhoneOperator('+994501234567')}');
+    print('Operator: ${AzerbaijanUtils.getPhoneOperator('+994501234567')}');
   }
   
   // FIN validation
-  if (AzerbaijanValidator.validateFIN('1AB2C3D')) {
+  if (AzerbaijanUtils.validateFIN('1AB2C3D')) {
     print('Valid FIN code!');
   }
   
