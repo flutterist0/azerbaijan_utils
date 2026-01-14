@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 ## [1.0.0] - 2026-01-14
 
 ### Added
-- Initial release of Azerbaijan Validator package
+- Initial release of Validati10 package
 - Phone number validation with support for all Azerbaijani mobile operators
   - Azercell (50, 51, 55)
   - Bakcell (70, 77)
