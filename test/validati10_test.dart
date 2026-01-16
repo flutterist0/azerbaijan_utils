@@ -8,7 +8,6 @@ import 'package:validati10/validati10.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  // Test üçün istifadə edəcəyimiz saxta JSON qaydaları.
   const String mockRulesJson = '''
   {
     "AZ": {
@@ -34,13 +33,11 @@ void main() {
       return ByteData.view(Uint8List.fromList(utf8.encode(mockRulesJson)).buffer);
     });
 
-    // Default country artıq yoxdur
     await Validati10.initialize();
   });
 
   group('AZ Country Tests', () {
     test('Validates Phone Numbers correctly', () {
-      // Country: 'AZ' mütləq qeyd olunmalıdır
       expect(Validati10.validatePhoneNumber('+994501234567', country: 'AZ'), true);
       expect(Validati10.validatePhoneNumber('+15551234567', country: 'AZ'), false);
     });
