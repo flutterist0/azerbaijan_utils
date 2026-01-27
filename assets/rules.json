@@ -28,12 +28,12 @@
     },
     "vehicle": {
       "regex": "^[0-9]{2}[A-Z]{2}[0-9]{3}$",
-      "format_pattern": "##-XX-###", 
+      "format_pattern": "##-XX-###",
       "region_index": [0, 2]
     },
     "postal": {
       "regex": "^AZ\\d{4}(\\d{2})?$",
-      "format_pattern": "XX ####"
+      "format_pattern": "AZ ####"
     }
   },
   "TR": {
@@ -60,6 +60,186 @@
     "postal": {
       "regex": "^\\d{5}$",
       "format_pattern": "#####"
+    }
+  },
+  "GE": {
+    "phone": {
+      "regex": "^(\\+995|995|0)?(5\\d{8}|[347]\\d{8})$",
+      "format_clean_regex": "[\\s\\-\\(\\)]",
+      "prefix_replace": {
+        "+995": "",
+        "995": "",
+        "0": "+995"
+      },
+      "operators": {
+        "55": "Magticom",
+        "57": "Magticom",
+        "58": "Silknet",
+        "59": "Geocell",
+        "51": "Beeline",
+        "32": "Sakartvelo (landline)"
+      }
+    },
+    "identity": {
+      "name": "Personal Number",
+      "regex": "^[0-9]{11}$",
+      "length": 11,
+      "requires_digit": true,
+      "requires_letter": false
+    },
+    "vehicle": {
+      "regex": "^[A-Z]{2}[0-9]{3}[A-Z]{2}$",
+      "format_pattern": "XX-###-XX"
+    },
+    "postal": {
+      "regex": "^\\d{4}$",
+      "format_pattern": "####"
+    }
+  },
+  "AM": {
+    "phone": {
+      "regex": "^(\\+374|374|0)?([3479]\\d{7}|[1-9]\\d{5})$",
+      "format_clean_regex": "[\\s\\-\\(\\)]",
+      "prefix_replace": {
+        "+374": "",
+        "374": "",
+        "0": "+374"
+      },
+      "operators": {
+        "77": "Ucom",
+        "91": "Ucom",
+        "93": "VivaCell-MTS",
+        "94": "VivaCell-MTS",
+        "95": "VivaCell-MTS",
+        "96": "VivaCell-MTS",
+        "97": "VivaCell-MTS",
+        "98": "VivaCell-MTS",
+        "99": "Beeline"
+      }
+    },
+    "identity": {
+      "name": "Social Card Number",
+      "regex": "^[0-9]{10}$",
+      "length": 10,
+      "requires_digit": true,
+      "requires_letter": false
+    },
+    "vehicle": {
+      "regex": "^[0-9]{2}[A-Z]{2}[0-9]{3}$",
+      "format_pattern": "##XX###"
+    },
+    "postal": {
+      "regex": "^(0[1-9]|[1-3][0-9]|4[0-8])\\d{2}$",
+      "format_pattern": "####"
+    }
+  },
+  "RU": {
+    "phone": {
+      "regex": "^(\\+7|8|7)?9\\d{9}$",
+      "format_clean_regex": "[\\s\\-\\(\\)]",
+      "prefix_replace": {
+        "+7": "",
+        "8": "+7",
+        "7": "+7"
+      },
+      "operators": {
+        "900": "МегаФон",
+        "902": "МегаФон",
+        "903": "МегаФон",
+        "904": "МегаФон",
+        "905": "Билайн",
+        "906": "Билайн",
+        "909": "Билайн",
+        "910": "МТС",
+        "911": "МТС",
+        "912": "МТС",
+        "913": "МТС",
+        "914": "МТС",
+        "915": "МТС",
+        "916": "МТС",
+        "917": "МТС",
+        "918": "МТС",
+        "919": "МТС",
+        "920": "МегаФон",
+        "921": "МегаФон",
+        "922": "МегаФон",
+        "923": "МегаФон",
+        "924": "МегаФон",
+        "925": "МегаФон",
+        "926": "МегаФон",
+        "927": "МегаФон",
+        "928": "МегаФон",
+        "929": "МегаФон",
+        "960": "Билайн",
+        "961": "Билайн",
+        "962": "Билайн",
+        "963": "Билайн",
+        "964": "Билайн",
+        "965": "Билайн",
+        "966": "Билайн",
+        "967": "Билайн",
+        "968": "Билайн"
+      }
+    },
+    "identity": {
+      "name": "Passport",
+      "regex": "^[0-9]{4}[0-9]{6}$",
+      "length": 10,
+      "requires_digit": true,
+      "requires_letter": false
+    },
+    "vehicle": {
+      "regex": "^[АВЕКМНОРСТУХ]{1}[0-9]{3}[АВЕКМНОРСТУХ]{2}[0-9]{2,3}$",
+      "format_pattern": "X###XX##"
+    },
+    "postal": {
+      "regex": "^\\d{6}$",
+      "format_pattern": "######"
+    }
+  },
+  "IR": {
+    "phone": {
+      "regex": "^(\\+98|98|0)?9\\d{9}$",
+      "format_clean_regex": "[\\s\\-\\(\\)]",
+      "prefix_replace": {
+        "+98": "",
+        "98": "",
+        "0": "+98"
+      },
+      "operators": {
+        "910": "Hamrah-e Aval (MCI)",
+        "911": "Hamrah-e Aval (MCI)",
+        "912": "Hamrah-e Aval (MCI)",
+        "913": "Hamrah-e Aval (MCI)",
+        "914": "Hamrah-e Aval (MCI)",
+        "915": "Hamrah-e Aval (MCI)",
+        "916": "Hamrah-e Aval (MCI)",
+        "917": "Hamrah-e Aval (MCI)",
+        "918": "Hamrah-e Aval (MCI)",
+        "919": "Hamrah-e Aval (MCI)",
+        "990": "Irancell",
+        "991": "Irancell",
+        "992": "Irancell",
+        "993": "Irancell",
+        "994": "TeleKish",
+        "920": "Rightel",
+        "921": "Rightel"
+      }
+    },
+    "identity": {
+      "name": "National Code",
+      "regex": "^[0-9]{10}$",
+      "length": 10,
+      "requires_digit": true,
+      "requires_letter": false
+    },
+    "vehicle": {
+      "regex": "^[0-9]{2}[A-Z]{1}[0-9]{3}[A-Z]{2}[0-9]{2}$",
+      "format_pattern": "##X###XX##"
+    },
+    "postal": {
+      "regex": "^\\d{10}$",
+      "format_pattern": "##########"
     }
   }
 }
